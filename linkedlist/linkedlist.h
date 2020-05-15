@@ -1,34 +1,20 @@
 #ifndef __LINKED_LIST_H__
 #define __LINKED_LIST_H__
 
+class Node;
 class LinkedList{
     public:
-        LinkedList() {
-            Node * beginNode = new Node;
-            Node * endNode = new Node;
-            root_ = beginNode;
+        LinkedList();
 
-        }
-        ~LinkedList() {
-            Node * node = root_->next;
-            while(node != root_) {
-                Node * now = node->next;
-                delete(node);
-                node = now;
-            }
-            delete root_;
-        }
-        void Insert(int key, int value) {
-        }
+        ~LinkedList();
 
-        void Delete(int key) {
-        }
+        void Insert(int key, int value);
 
-        void update(int key, int newValue) {
-        }
+        void Delete(int key);
 
-        int Find(int key) {
-        }
+        void update(int key, int newValue);
+
+        int Find(int key);
     private:
         Node * root_;
 };
@@ -39,8 +25,6 @@ class Node{
         int value;
         Node * pre;
         Node * next;
-        ~Node(){
-        }
 };
 
 #endif // !__LINKED_LIST_H__
